@@ -1,0 +1,907 @@
+<!--  FILENAME : home.html
+ DESCRIPTION :   This home.html file consist of the home page html code for Version control system website, developed using HTML, CSS, JavaScript, Node and Express JS
+                 This includes the source and target folder over which the files are to be copied using NodeJS code.
+                 The code includes multiple commented code which was written in order to get the desired output in different way.
+                 Any user/reader is suggested to ignore the commented portion and focus on the main code to understand it easily
+                 The tags and classnames have easier reference name so as the user/reader can understand.
+
+
+AUTHOR : Suchitra Chinnamail        EMAIL : suchitrareddy.chinnamail@student.csulb.edu
+         Haritha Nimmagadda         EMAIL : haritha.nimmagadda@student.csulb.edu
+         Sonu Jacob                 EMAIL : sonu.jacob@student.csulb.edu
+
+
+START DATE : 12 September 2019
+END DATE   : 09 November 2019 -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<!--  <link rel="stylesheet" href="styles.css"> -->
+<!--  <script type="text/javascript" src="D:\MS\CSULB\Sem 1\CECS 543_SoftwareEngineering\Project\Part2_Chekin\home.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+   
+    
+
+<script>
+$(document).ready(function(){
+$("#btn3").click(function(){
+$("#delta").css("display","block");
+$("#cmd").css("display","none");
+
+});
+});
+$(document).ready(function(){
+$("#btn4").click(function(){
+$("#delta").css("display","block");
+$("#cmd").css("display","none");
+
+});
+});
+$(document).ready(function(){
+$("#btn5").click(function(){
+$("#delta").css("display","block");
+$("#cmd").css("display","none");
+});
+});
+$(document).ready(function(){
+$("#btn9").click(function(){
+$("#delta").css("display","block");
+$("#cmd").css("display","none");
+});
+});
+
+$(document).ready(function(){
+$("#btn11").click(function(){
+$("#delta").css("display","block");
+$("#cmd").css("display","none");
+});
+});
+
+
+$(document).ready(function(){
+$("#btn15").click(function(){
+$("#delta").css("display","block");
+$("#cmd").css("display","none");
+});
+});
+
+
+$(document).ready(function(){
+$("#btn16").click(function(){
+$("#delta").css("display","block");
+$("#cmd").css("display","none");
+});
+});
+
+
+$(document).ready(function(){
+$("#btn17").click(function(){
+$("#delta").css("display","none");
+$("#cmd").css("display","block");
+});
+});
+
+
+//cmdEnter
+$('#cmdEnter').addEventListener("keyup", function(e){
+    if(e.keyCode === 13){
+      e.preventDefault();
+     // document.getElementById("cmdline").display.innerHTML=document.getElementById("cmd").display.innerHTML;
+             // return false;
+             var x= document.getElementById("cmdEnter").value;
+             console.log(x);
+    }
+});
+
+
+$(document).ready(function(){
+//$("#btn6").click(function(){
+ $("#ipoo").focusout(function(){ 
+    $('#ipooEr').hide();
+if($("#ipoo").val().trim().length == 0)
+   $('#ipoo').after('<span style="color:red" class="error" id="ipooEr">This field is required</span>'); 
+ });
+$("#ifoo").focusout(function(){ 
+  $('#ifooEr').hide();
+if($("#ifoo").val().trim().length == 0)
+$('#ifoo').after('<span class="error" style="color:red"  id="ifooEr">This field is required</span>');
+});
+
+$("#imoo").focusout(function(){ 
+  $('#imooEr').hide();
+if($("#imoo").val().trim().length == 0)
+$('#imoo').after('<span class="error" style="color:red"  id="imooEr">This field is required</span>');
+});
+
+$("#lb1").focusout(function(){ 
+  $('#lb1Er').hide();
+if($("#lb1").val().trim().length == 0)
+$('#lb1').after('<span class="error" style="color:red"  id="lb1Er">This field is required</span>');
+});
+
+$("#lb2").focusout(function(){ 
+  $('#lb2Er').hide();
+if($("#lb2").val().trim().length == 0)
+$('#lb2').after('<span class="error" style="color:red"  id="lb2Er">This field is required</span>');
+});
+
+$("#lb3").focusout(function(){ 
+  $('#lb3Er').hide();
+if($("#lb3").val().trim().length == 0)
+$('#lb3').after('<span class="error" style="color:red"  id="lb3Er">This field is required</span>');
+});
+$("#lb4").focusout(function(){ 
+  $('#lb4Er').hide();
+if($("#lb4").val().trim().length == 0)
+$('#lb4').after('<span class="error" style="color:red"  id="lb4Er">This field is required</span>');
+});
+$("#lb1").focusout(function(){ 
+  $('#lb1LenEr').hide();
+if($("#lb1").val().trim().length >29)
+   $('#lb1').after('<span style="color:red" class="error" id="lb1LenEr">Too long! Considers only first 30 charaters.</span>'); 
+});
+
+ $("#lb2").focusout(function(){ 
+   $('#lb2LenEr').hide();
+if($("#lb2").val().trim().length >29)
+   $('#lb2').after('<span style="color:red" class="error" id="lb2LenEr">Too long! Considers only first 30 charaters.</span>'); 
+ });
+
+$("#lb3").focusout(function(){ 
+  $('#lb3LenEr').hide();
+if($("#lb3").val().trim().length >29)
+   $('#lb3').after('<span style="color:red" class="error" id="lb3LenEr">Too long! Considers only first 30 charaters.</span>'); 
+});
+
+$("#lb4").focusout(function(){  
+  $('#lb4LenEr').hide();
+if($("#lb4").val().trim().length >29)
+   $('#lb4').after('<span style="color:red" class="error" id="lb4LenEr">Too long! Considers only first 30 charaters.</span>'); 
+
+});
+
+//});
+});
+
+$("#boo").submit(function(){
+  $("#btn6").click(function(){
+if(($("#ipoo").val().trim().length == 0)||($("#ifoo").val().trim().length == 0)||($("#imoo").val().trim().length == 0))
+{
+  alert("Some field are blank. Please check and submit again!!");
+return false;
+}
+else
+{
+  showAlert();
+}
+});
+
+$("#btn7").click(function(){
+if(($("#ipoo").val().trim().length == 0)||($("#ifoo").val().trim().length == 0)||($("#imoo").val().trim().length == 0)||
+($("#lb1").val().trim().length == 0)||($("#lb2").val().trim().length == 0)||($("#lb3").val().trim().length == 0)||
+($("#lb4").val().trim().length == 0))
+{
+  alert("Some field are blank. Please check and submit again!!");
+return false;
+}
+else if(($("#lb1").val().trim().length >30) || ($("#lb2").val().trim().length > 30) || ($("#lb3").val().trim().length > 0) 
+($("#lb4").val().trim().length > 30))
+{
+  alert("Some field are too long. Please provide label names shorter than 30 charaters and submit again!!");
+
+  return false;
+ 
+
+}
+else{
+  showAlert();
+}
+});
+$("#btn8").click(function(){
+if(($("#ipoo").val().trim().length == 0)||($("#ifoo").val().trim().length == 0)||($("#imoo").val().trim().length == 0)||
+($("#lb1").val().trim().length == 0)||($("#lb2").val().trim().length == 0)||($("#lb3").val().trim().length == 0)||
+($("#lb4").val().trim().length == 0))
+{
+  alert("Some field are blank. Please check and submit again!!");
+return false;
+}
+else
+{
+  showAlert();
+}
+});
+$("#btn10").click(function(){
+if(($("#ipoo").val().trim().length == 0)||($("#ifoo").val().trim().length == 0)||($("#imoo").val().trim().length == 0)||
+($("#lb1").val().trim().length == 0)||($("#lb2").val().trim().length == 0)||($("#lb3").val().trim().length == 0)||
+($("#lb4").val().trim().length == 0))
+{
+  alert("Some field are blank. Please check and submit again!!");
+return false;
+}
+else
+{
+  showAlert();
+}
+});
+
+$("#btn12").click(function(){
+if(($("#ipoo").val().trim().length == 0)||($("#ifoo").val().trim().length == 0)||($("#imoo").val().trim().length == 0)||
+($("#lb1").val().trim().length == 0)||($("#lb2").val().trim().length == 0)||($("#lb3").val().trim().length == 0)||
+($("#lb4").val().trim().length == 0))
+{
+  alert("Some field are blank. Please check and submit again!!");
+return false;
+}
+else
+{
+  showAlert();
+}
+});
+
+$("#btn13").click(function(){
+if(($("#imoo").val().trim().length == 0)||($("#ifoo").val().trim().length == 0))
+{
+  alert("Some field are blank. Please check and submit again!!");
+return false;
+}
+else
+{
+  showAlert();
+}
+});
+
+$("#btn14").click(function(){
+if(($("#ifoo").val().trim().length == 0)||($("#imoo").val().trim().length == 0))
+{
+  alert("Some field are blank. Please check and submit again!!");
+return false;
+}
+else
+{
+  showAlert();
+}
+});
+
+
+});
+
+
+
+</script>
+    <style>
+    .btn {
+  background-color: #566573;
+  border: none;
+  color: white;
+  padding: 15px 50px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  width:250px;
+}
+
+.footer {
+
+  width: 100%;
+  background-color: #566573;
+  color: white;
+  text-align: center;
+}
+.delta
+{
+  display:none;
+}
+.header {
+
+   width: 100%;
+   background-color: #566573;
+   color: white;
+   text-align: center;
+
+}
+
+.left {
+background-color: #D5D8DC;
+
+
+}
+.right{
+
+  background-color: #D5D8DC;
+
+}
+</style>
+    <script>
+function showAlert(){
+    alert("Request received. You will see a confirmation message once the task is completed.");
+    //hn026636140
+  // var repositoryName=document.getElementById("RepoName").value;
+}
+</script>
+
+<script>
+function setvalue(){
+   $('#ipooEr').hide();
+    $('#ifooEr').hide();
+     $('#imooEr').hide();
+     $('#lb1Er').hide();
+     $('#lb1LenEr').hide();
+     $('#lb2Er').hide();
+     $('#lb2LenEr').hide();
+     $('#lb3Er').hide();
+     $('#lb3LenEr').hide();
+     $('#lb4Er').hide();
+     $('#lb4LenEr').hide();
+      $('#msg').hide();    
+//document.getElementById("msg").display="none";
+document.getElementById("foo").innerHTML="Enter local Path : ";
+  document.getElementById("moo").innerHTML = "Enter Repo Path : ";
+  document.getElementById("poo").innerHTML ="Enter Repository Name :";
+//document.getElementById("homePgeMsg").style.display="none";
+document.getElementById("btn7").style.display="none";
+document.getElementById("btn8").style.display="none";
+document.getElementById("btn6").style.display="block";
+  document.getElementById("poo").style.display = "block";
+  document.getElementById("ipoo").style.display = "block";
+  document.getElementById("btn7").disabled = false;
+  document.getElementById("btn8").disabled = false;
+  document.getElementById("btn6").disabled = false;
+   document.getElementById("btn10").disabled = false;
+  document.getElementById("btn10").style.display="none";
+  document.getElementById("btn12").disabled = false;
+  document.getElementById("btn12").style.display="none";
+   document.getElementById("foo").style.display = "block";
+   document.getElementById("ifoo").style.display="block";
+   document.getElementById("ifoo").value = "";
+document.getElementById("imoo").value = "";
+document.getElementById("lb1").style.display = "none";
+  document.getElementById("lb2").style.display = "none";
+  document.getElementById("lb3").style.display = "none";
+  document.getElementById("lb4").style.display = "none";
+  document.getElementById("lbname").style.display="none";
+  document.getElementById("btn13").disabled = false;
+  document.getElementById("btn14").disabled = false;
+  document.getElementById("btn14").style.display="none"; 
+  document.getElementById("btn13").style.display="none";
+document.getElementById("cmd").style.display = "none";
+document.getElementById("cmdline").style.display = "none";
+document.getElementById("btn18").style.display="none"; 
+ document.getElementById("cmdInstruction").style.display="none"; 
+}
+</script>
+<script>
+function setLabelvalue()
+{
+   $('#ipooEr').hide();
+    $('#ifooEr').hide();
+     $('#imooEr').hide();
+      $('#msg').hide(); 
+      $('#lb1Er').hide();
+     $('#lb1LenEr').hide();
+     $('#lb2Er').hide();
+     $('#lb2LenEr').hide();
+     $('#lb3Er').hide();
+     $('#lb3LenEr').hide();
+     $('#lb4Er').hide();
+     $('#lb4LenEr').hide();
+ //document.getElementById("foo").innerHTML="Enter local Path : "
+  document.getElementById("moo").innerHTML = "Enter Repo Path for a project : "
+//document.getElementById("msg").display="none";
+//document.getElementById("homePgeMsg").style.display="none";
+document.getElementById("btn6").style.display="none";
+document.getElementById("btn8").style.display="none";
+document.getElementById("btn7").style.display="none";
+document.getElementById("poo").style.display="none";
+
+document.getElementById("ipoo").style.display="none";
+document.getElementById("ifoo").style.display="none";
+document.getElementById("imoo").style.display="block";
+  document.getElementById("btn7").disabled = true;
+  document.getElementById("btn8").disabled = true;
+  document.getElementById("btn6").disabled = true;
+   document.getElementById("btn10").disabled = false;
+  document.getElementById("btn10").style.display="block";
+  document.getElementById("btn12").disabled = false;
+  document.getElementById("btn12").style.display="none";
+  document.getElementById("foo").style.display = "none";
+  document.getElementById("ifoo").style.display = "none";
+  document.getElementById("moo").style.display="block";
+  //document.getElementById("ipooEr").style.display="none";
+ // document.getElementById("ifooEr").style.display="none"; 
+document.getElementById("imoo").value = "";
+document.getElementById("lb1").style.display = "none";
+  document.getElementById("lb2").style.display = "none";
+  document.getElementById("lb3").style.display = "none";
+  document.getElementById("lb4").style.display = "none";
+  document.getElementById("lbname").style.display="none";
+  document.getElementById("btn13").disabled = false;
+  document.getElementById("btn14").disabled = false;
+  document.getElementById("btn14").style.display="none"; 
+  document.getElementById("btn13").style.display="none";
+ document.getElementById("cmd").style.display = "none";
+ document.getElementById("cmdline").style.display = "none";
+  document.getElementById("btn18").style.display="none"; 
+   document.getElementById("cmdInstruction").style.display="none"; 
+}
+</script>
+<script>
+function setALabelForAManifest()
+{
+   $('#ipooEr').hide();
+    $('#ifooEr').hide();
+     $('#imooEr').hide();
+     $('#msg').hide(); 
+     $('#lb1Er').hide();
+     $('#lb1LenEr').hide();
+     $('#lb2Er').hide();
+     $('#lb2LenEr').hide();
+     $('#lb3Er').hide();
+     $('#lb3LenEr').hide();
+     $('#lb4Er').hide();
+     $('#lb4LenEr').hide();
+//hn026636140
+document.getElementById("poo").innerHTML="Enter New label Name : "
+document.getElementById("foo").innerHTML="Enter label Name/Manifest file name :"
+document.getElementById("moo").innerHTML="Enter Repo Path : "
+//document.getElementById("msg").display="none";
+//document.getElementById("homePgeMsg").style.display="none";
+document.getElementById("btn6").style.display="none";
+document.getElementById("btn7").style.display="none";
+document.getElementById("btn8").style.display="none";
+  document.getElementById("poo").style.display = "block";
+  document.getElementById("ipoo").style.display = "block";
+  document.getElementById("btn7").disabled = false;
+  document.getElementById("btn8").disabled = false;
+  document.getElementById("btn6").disabled = false;
+  document.getElementById("btn10").disabled = false;
+  document.getElementById("btn10").style.display="none";
+  document.getElementById("btn12").disabled = false;
+  document.getElementById("btn12").style.display="block";
+  document.getElementById("ifoo").style.display = "block";
+  document.getElementById("foo").style.display = "block";
+  //document.getElementById("ipooEr").style.display="none";
+  document.getElementById("lb1").style.display = "none";
+  document.getElementById("lb2").style.display = "none";
+  document.getElementById("lb3").style.display = "none";
+  document.getElementById("lb4").style.display = "none";  
+  document.getElementById("lbname").style.display="none";
+  document.getElementById("btn13").disabled = false;
+  document.getElementById("btn14").disabled = false;
+  document.getElementById("btn14").style.display="none"; 
+  document.getElementById("btn13").style.display="none";
+  document.getElementById("cmd").style.display = "none";
+  document.getElementById("cmdline").style.display = "none";
+document.getElementById("btn18").style.display="none"; 
+ document.getElementById("cmdInstruction").style.display="none"; 
+}
+</script>
+<script>
+function setCheckInvalue(){
+   $('#ipooEr').hide();
+    $('#ifooEr').hide();
+     $('#imooEr').hide();
+      $('#msg').hide();
+      $('#lb1Er').hide();
+     $('#lb1LenEr').hide();
+     $('#lb2Er').hide();
+     $('#lb2LenEr').hide();
+     $('#lb3Er').hide();
+     $('#lb3LenEr').hide();
+     $('#lb4Er').hide();
+     $('#lb4LenEr').hide(); 
+//hn026636140
+document.getElementById("foo").innerHTML="Enter local Path : "
+  document.getElementById("moo").innerHTML = "Enter Repo Path : "
+//document.getElementById("msg").display="none";
+//document.getElementById("homePgeMsg").style.display="none";
+document.getElementById("btn6").style.display="none";
+document.getElementById("btn8").style.display="none";
+document.getElementById("btn7").style.display="block";
+document.getElementById("poo").style.display="none";
+document.getElementById("ipoo").style.display="none";
+  document.getElementById("btn7").disabled = false;
+  document.getElementById("btn8").disabled = false;
+  document.getElementById("btn6").disabled = false;
+   document.getElementById("btn10").disabled = false;
+  document.getElementById("btn10").style.display="none";
+  document.getElementById("btn12").disabled = false;
+  document.getElementById("btn12").style.display="none";
+document.getElementById("foo").style.display = "block";
+document.getElementById("ifoo").style.display = "block";
+document.getElementById("ifoo").value = "";
+document.getElementById("imoo").value = "";
+//document.getElementById("ipooEr").style.display="none";
+document.getElementById("lb1").style.display = "block";
+  document.getElementById("lb2").style.display = "block";
+  document.getElementById("lb3").style.display = "block";
+  document.getElementById("lb4").style.display = "block";
+  document.getElementById("lbname").style.display="block";
+  document.getElementById("btn13").disabled = false;
+  document.getElementById("btn14").disabled = false;
+  document.getElementById("btn14").style.display="none"; 
+  document.getElementById("btn13").style.display="none";
+  document.getElementById("cmd").style.display = "none";
+  document.getElementById("cmdline").style.display = "none";
+ document.getElementById("btn18").style.display="none"; 
+ document.getElementById("cmdInstruction").style.display="none"; 
+
+}
+</script>
+<script>
+function setCheckoutvalue(){
+   $('#ipooEr').hide();
+    $('#ifooEr').hide();
+     $('#imooEr').hide();
+     $('#msg').hide(); 
+     $('#lb1Er').hide();
+     $('#lb1LenEr').hide();
+     $('#lb2Er').hide();
+     $('#lb2LenEr').hide();
+     $('#lb3Er').hide();
+     $('#lb3LenEr').hide();
+     $('#lb4Er').hide();
+     $('#lb4LenEr').hide();
+//hn026636140
+document.getElementById("poo").innerHTML="Enter label Name/Manifest file name : "
+document.getElementById("foo").innerHTML="Enter local path to copy the code : "
+document.getElementById("moo").innerHTML="Enter Repo Path: "
+//document.getElementById("msg").display="none";
+//document.getElementById("homePgeMsg").style.display="none";
+document.getElementById("btn6").style.display="none";
+document.getElementById("btn7").style.display="none";
+document.getElementById("btn8").style.display="block";
+  document.getElementById("poo").style.display = "block";
+  document.getElementById("ipoo").style.display = "block";
+  document.getElementById("btn7").disabled = false;
+  document.getElementById("btn8").disabled = false;
+  document.getElementById("btn6").disabled = false;
+  document.getElementById("btn10").disabled = false;
+  document.getElementById("btn10").style.display="none";
+  document.getElementById("btn12").disabled = false;
+  document.getElementById("btn12").style.display="none";
+  document.getElementById("ifoo").style.display = "block";
+  document.getElementById("foo").style.display = "block";
+  //document.getElementById("ipooEr").style.display="none";
+  document.getElementById("lb1").style.display = "none";
+  document.getElementById("lb2").style.display = "none";
+  document.getElementById("lb3").style.display = "none";
+  document.getElementById("lb4").style.display = "none";  
+  document.getElementById("lbname").style.display="none";
+  document.getElementById("btn13").disabled = false;
+  document.getElementById("btn14").disabled = false;
+  document.getElementById("btn14").style.display="none"; 
+  document.getElementById("btn13").style.display="none";
+  document.getElementById("cmd").style.display = "none";
+  document.getElementById("cmdline").style.display = "none";
+  document.getElementById("btn18").style.display="none"; 
+ document.getElementById("cmdInstruction").style.display="none"; 
+}
+</script>
+
+
+<script>
+function setMergeInValue(){
+   $('#ipooEr').hide();
+    $('#ifooEr').hide();
+     $('#imooEr').hide();
+      $('#msg').hide();
+      $('#lb1Er').hide();
+     $('#lb1LenEr').hide();
+     $('#lb2Er').hide();
+     $('#lb2LenEr').hide();
+     $('#lb3Er').hide();
+     $('#lb3LenEr').hide();
+     $('#lb4Er').hide();
+     $('#lb4LenEr').hide(); 
+//hn026636140
+document.getElementById("foo").innerHTML="Enter local Path : "
+  document.getElementById("moo").innerHTML = "Enter Repo Path : "
+//document.getElementById("msg").display="none";
+//document.getElementById("homePgeMsg").style.display="none";
+document.getElementById("btn6").style.display="none";
+document.getElementById("btn8").style.display="none";
+document.getElementById("btn7").style.display="none";
+document.getElementById("poo").style.display="none";
+document.getElementById("ipoo").style.display="none";
+  document.getElementById("btn7").disabled = false;
+  document.getElementById("btn8").disabled = false;
+  document.getElementById("btn6").disabled = false;
+   document.getElementById("btn10").disabled = false;
+  document.getElementById("btn10").style.display="none";
+  document.getElementById("btn12").disabled = false;
+  document.getElementById("btn13").disabled = false;
+  document.getElementById("btn14").disabled = false;
+  document.getElementById("btn12").style.display="none";
+   document.getElementById("btn13").style.display="none";
+    document.getElementById("btn14").style.display="block";
+document.getElementById("foo").style.display = "block";
+document.getElementById("moo").style.display = "block";
+document.getElementById("ifoo").style.display = "block";
+document.getElementById("imoo").style.display = "block";
+document.getElementById("ifoo").value = "";
+document.getElementById("imoo").value = "";
+//document.getElementById("ipooEr").style.display="none";
+document.getElementById("lb1").style.display = "none";
+  document.getElementById("lb2").style.display = "none";
+  document.getElementById("lb3").style.display = "none";
+  document.getElementById("lb4").style.display = "none";
+  document.getElementById("lbname").style.display="none";
+  document.getElementById("cmd").style.display = "none";
+  document.getElementById("cmdline").style.display = "none";
+document.getElementById("btn18").style.display="none"; 
+  document.getElementById("cmdInstruction").style.display="none"; 
+
+
+}
+</script>
+<script>
+function setMergeOutvalue(){
+   $('#ipooEr').hide();
+    $('#ifooEr').hide();
+     $('#imooEr').hide();
+     $('#msg').hide(); 
+     $('#lb1Er').hide();
+     $('#lb1LenEr').hide();
+     $('#lb2Er').hide();
+     $('#lb2LenEr').hide();
+     $('#lb3Er').hide();
+     $('#lb3LenEr').hide();
+     $('#lb4Er').hide();
+     $('#lb4LenEr').hide();
+//hn026636140
+//document.getElementById("poo").innerHTML="Enter label Name/Manifest file name : "
+document.getElementById("foo").innerHTML="Enter target path: "
+document.getElementById("moo").innerHTML="Enter Repo Path: "
+//document.getElementById("msg").display="none";
+//document.getElementById("homePgeMsg").style.display="none";
+document.getElementById("btn6").style.display="none";
+document.getElementById("btn7").style.display="none";
+document.getElementById("btn8").style.display="none";
+  document.getElementById("poo").style.display = "none";
+  document.getElementById("ipoo").style.display = "none";
+  document.getElementById("btn7").disabled = false;
+  document.getElementById("btn8").disabled = false;
+  document.getElementById("btn6").disabled = false;
+  document.getElementById("btn10").disabled = false;
+  document.getElementById("btn10").style.display="none";
+  document.getElementById("btn12").style.display="none";
+  document.getElementById("btn12").disabled = false;
+   document.getElementById("btn13").disabled = false;
+    document.getElementById("btn14").disabled = false;
+      document.getElementById("btn14").style.display="none"; 
+  document.getElementById("btn13").style.display="block";
+  document.getElementById("ifoo").style.display = "block";
+  document.getElementById("foo").style.display = "block";
+  //document.getElementById("ipooEr").style.display="none";
+  document.getElementById("lb1").style.display = "none";
+  document.getElementById("lb2").style.display = "none";
+  document.getElementById("lb3").style.display = "none";
+  document.getElementById("lb4").style.display = "none";  
+  document.getElementById("lbname").style.display="none";
+   document.getElementById("cmd").style.display = "none";
+   document.getElementById("cmdline").style.display = "none";
+   document.getElementById("btn18").style.display="none"; 
+   document.getElementById("cmdInstruction").style.display="none"; 
+   
+  
+
+}
+</script>
+
+<script>
+function setCommandPrompt(){
+   $('#ipooEr').hide();
+    $('#ifooEr').hide();
+     $('#imooEr').hide();
+     $('#msg').hide(); 
+     $('#lb1Er').hide();
+     $('#lb1LenEr').hide();
+     $('#lb2Er').hide();
+     $('#lb2LenEr').hide();
+     $('#lb3Er').hide();
+     $('#lb3LenEr').hide();
+     $('#lb4Er').hide();
+     $('#lb4LenEr').hide();
+//hn026636140
+//document.getElementById("poo").innerHTML="Enter label Name/Manifest file name : "
+//document.getElementById("foo").innerHTML="Enter target path: "
+//document.getElementById("moo").innerHTML="Enter Repo Path: "
+//document.getElementById("msg").display="none";
+//document.getElementById("homePgeMsg").style.display="none";
+document.getElementById("btn6").style.display="none";
+document.getElementById("btn7").style.display="none";
+document.getElementById("btn8").style.display="none";
+  document.getElementById("poo").style.display = "none";
+  document.getElementById("ipoo").style.display = "none";
+  document.getElementById("btn7").disabled = false;
+  document.getElementById("btn8").disabled = false;
+  document.getElementById("btn6").disabled = false;
+  document.getElementById("btn10").disabled = false;
+  document.getElementById("btn10").style.display="none";
+  document.getElementById("btn12").style.display="none";
+  document.getElementById("btn12").disabled = false;
+   document.getElementById("btn13").disabled = false;
+    document.getElementById("btn14").disabled = false;
+      document.getElementById("btn14").style.display="none"; 
+  document.getElementById("btn13").style.display="none";
+  document.getElementById("ifoo").style.display = "none";
+  document.getElementById("foo").style.display = "none";
+  document.getElementById("imoo").style.display = "none";
+  document.getElementById("moo").style.display = "none";
+  //document.getElementById("ipooEr").style.display="none";
+  document.getElementById("lb1").style.display = "none";
+  document.getElementById("lb2").style.display = "none";
+  document.getElementById("lb3").style.display = "none";
+  document.getElementById("lb4").style.display = "none";  
+  document.getElementById("lbname").style.display="none";
+  document.getElementById("cmd").style.display = "block";
+  document.getElementById("cmdline").style.display = "block";
+   document.getElementById("cmdInstruction").style.display="block"; 
+   document.getElementById("btn18").style.display="block"; 
+   //cmdInstruction
+
+}
+</script>
+
+</head>
+<body style="background-color: #EAECEE;" >
+  
+  <table id="main" width="100%"
+      style="height: 100vh;"
+      cellpadding="10"
+      cellspacing="0"
+      border="0">
+      <form id="boo" name="boo" action="http://localhost:3000" method="POST">
+    <tr class="header" style="height:10%">
+      <td colspan="3">
+
+<center><H1 > Version Control System </H1> </center>
+</td>
+
+</tr>
+
+  <tr style="height:82%;">
+  <td style="overflow:auto" valign="top" class="left" width="18%" >
+
+
+            <button tabindex="-1" id="btn3"  class="btn"   name="getbutton" value="3" onClick="setvalue()" > Create Repository </button></br>
+            <button tabindex="-1" id="btn4"  class="btn"   name="getbutton" value="4" onClick="setCheckInvalue()" > Check-In </button></br>
+            <button tabindex="-1" id="btn5"  class="btn"  name="getbutton" value="5" onClick="setCheckoutvalue()" > Check-Out </button></br>
+            <button tabindex="-1" id="btn9" class="btn"  name="getbutton" value="9" onClick="setLabelvalue()"> Display Label Names </button></br>
+             <button tabindex="-1" id="btn11" class="btn"  name="getbutton" value="11" onClick="setALabelForAManifest()"> Create a Label </button></br>
+             <button tabindex="-1" id="btn15" class="btn"  name="getbutton" value="15" onClick="setMergeOutvalue()"> Merge-Out </button></br>
+             <button tabindex="-1" id="btn16" class="btn"  name="getbutton" value="16" onClick="setMergeInValue()"> Merge-In </button></br>
+             <button tabindex="-1" id="btn17" class="btn"  name="getbutton" value="17" onClick="setCommandPrompt()"> Command Line Interface </button></br>
+
+        </td>
+    <td  class="center" style="overflow:auto" width="57%" valign="top" style="text-align: center;">
+     <!-- <div id="homePgeMsg"><h4>Welcome to VCS</h4></div>-->
+    
+
+    <table style="width: 100%;" text-align="center"  id="delta" class="delta" align="center">
+      
+      <tr>
+        <td valign="center"  class="leftCol">
+          <p id="poo">Enter Repository Name :</p><br>
+        </td>
+        <td valign="center">
+          <input id="ipoo" onfocus="this.value=''" type="text" name="textbox3" value=""><br>
+        </td>
+      </tr>
+      <tr id="localPath">
+        <td valign="center" class="leftCol">
+      <p id="foo">Enter local project path :</p><br>
+      </td>
+      <td valign="center">
+      <input id="ifoo" onfocus="this.value=''" type="text" name="textbox1" ><br>
+      </td>
+      </tr>
+      <tr id="repoPath" class="leftCol">
+        <td valign="center">
+      <p id="moo">Enter Repository path :</p><br>
+        </td>
+        <td valign="center">
+      <input id="imoo" onfocus="this.value=''" type="text" name="textbox2" ><br>
+      </td>
+      </tr>
+      <tr>
+        <td><p id="lbname" name="lbname" class="leftCol">Enter four label Names for this Checkin :</p></td>
+        <td><input id="lb1" maxlength="30" onfocus="this.value=''" type="text" size=10 name="lbn1" ><input id="lb2" maxlength="30" onfocus="this.value=''" type="text" size=10 name="lbn2" > <input id="lb3" maxlength="30" onfocus="this.value=''" type="text" size=10 name="lbn3" > <input id="lb4" maxlength="30" onfocus="this.value=''" type="text" size=10 name="lbn4" >
+        </td>
+      </tr>
+      <tr>
+      <!--  <td colspan="2" align="center">-->
+      <td valign="center"></td>
+      <td valign="center">
+      <button id="btn6" type="submit" class="submitbtn"  name="getbutton" value="6" > Submit </button>
+      <button id="btn7" type="submit" class="submitbtn"  name="getbutton" value="7" > Submit </button>
+      <button id="btn8" type="submit" class="submitbtn"  name="getbutton" value="8" > Submit </button>
+      <button id="btn10" type="submit" class="submitbtn"  name="getbutton" value="10" > Submit </button>
+      <button id="btn12" type="submit" class="submitbtn"  name="getbutton" value="12" > Submit </button>
+       <button id="btn13" type="submit" class="submitbtn"  name="getbutton" value="13" > Submit </button>
+      <button id="btn14" type="submit" class="submitbtn"  name="getbutton" value="14" > Submit </button>
+
+      </td>
+      </tr>
+
+      </table>
+      
+      <br>
+          <p id=msg ><%=msg%> </p>
+          
+
+  <p id="cmdline" style="display: none;"> Command Line:</br></p>
+  <!--  <p><center> <textarea id="cmd" name="cmd"rows="25%" cols="70%" style="display: none;" ></textarea></center></p>-->
+    <input type="text" id="cmd" name="textbox4" style="width: 500px; height:30px;display: none;"></input>
+    
+      <button id="btn18" type="submit" class="submitbtn"  name="getbutton" value="18" style="display: none;" > Execute </button>
+
+
+
+
+<table id="cmdInstruction" style="display: none;">
+        <tr>
+          <td><strong>Commands</strong></td>
+          <td><strong>Arguments</strong></td>
+        </tr>
+      <tr>
+        <td>createrepo</td>
+        <td>RepoName loacalPath Repopath</td>        
+      </tr>
+<tr>
+  <td>checkin</td>
+        <td>loacalPath Repopath label1 label2 label3 label4</td>        
+      </tr>
+      <tr>
+        <td>checkout</td>
+        <td>labelName/ManifestFileName loacalPath Repopath</td>        
+      </tr>
+      <tr>
+        <td>displaylabels</td>
+        <td> Repopath</td>        
+      </tr>
+      <tr>
+        <td>createlabel</td>
+        <td>NewlabelName oldLabelName/ManifestFileName Repopath</td>        
+      </tr>
+      <tr>
+        <td>mergeout</td>
+        <td>targetpath repopath</td>        
+      </tr>
+      <tr>
+        <td>mergein</td>
+        <td>loacalPath Repopath</td>        
+      </tr> 
+      <tr>
+        <td colspan="2">Note: All the arguments are separated by a single space.And there should be no spaces with in a single argument. </td>
+      </tr>
+
+      </table>
+
+         
+
+  </td>
+<td class="right" width="25%" valign="top" >
+
+      <p>  Labels List: </p>
+
+        <div id="list"></div>
+
+    </td>
+      </tr>
+    <tr>
+      <td colspan="3" class="footer">
+
+        <h3>Project by: Suchitra,Haritha,Sonu</h3>
+
+    </td>
+    </tr>
+</form>
+</table>
+</body>
+</html>
