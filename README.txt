@@ -1,7 +1,7 @@
 README: Notes on an HTML + CSS + JS +JQUERY
 Time-stamp: <12/07/2019 @ 10:54pm (UTC) SHS>
 ------------------------------------------------------------
-The ë543-p3-SHS.zipí contains the following items:
+The project contains the following items:
 i)	home.html : A web page with header, footer, a buttons(Create Repositoy, Check-in. Check-out, Display label Names,Create a label,Merge out, Merge-In, Command Line Interface) and an a few input fields.
 ii)	home.js : It is a javascript file. When the request is made from the web page via button click , loads this script file. (provided that the home.js is already running at port 3000) 
 iii)	README.txt 
@@ -13,13 +13,13 @@ v)      Views : This folder has 2 files,label.ejs and message.ejs. These are use
 
 How to handle the above files to get results:
 
-Step 1: Extract files from ë543-p3-SHS.zipí .
+Step 1: Download the cod to local.
 
 Step 2: 
 	i)	Open command prompt and navigate to the same folder where the node modules are present.
 	ii)	Enter command- node home.js
-	iii)	A message, ìhome.js listening on port 3000!î is displayed on the command prompt.
-Step 3: Open a web browser and enter the url, ìhttp://localhost:3000/î. Then the web  page will be loaded, which contains five buttons and a few text fields.
+	iii)	A message, ‚Äúhome.js listening on port 3000!‚Äù is displayed on the command prompt.
+Step 3: Open a web browser and enter the url, ‚Äúhttp://localhost:3000/‚Äù. Then the web  page will be loaded, which contains five buttons and a few text fields.
 
 Step 4: Create Repository button: Once user click on this button, user will be allowed to enter, Repo name, repo path and local path. Once all the details are entered and submit button is clicked, a confirmation message is displayed.   
 
